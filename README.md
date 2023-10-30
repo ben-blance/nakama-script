@@ -1,6 +1,8 @@
-# nakama-script
+# nakama-script 
+
 
 ![Nakama Script Logo](nakama-logo.png)
+(It is a one piece ref)
 
 ## Installation
 
@@ -199,4 +201,6 @@ Nakama Script is open-source and released under the MIT License.
 ## Contact
 If you have any questions or need assistance, feel free to contact us at [sahilandhare2004@gmail.com].
 
-Happy coding with Nakama Script! Dont really expect too much of a performance its only my first language so ya it sucks :D
+Happy coding with Nakama Script! 
+
+it's only my first interpreted language so ya it probably sucks since I am dumb :D
