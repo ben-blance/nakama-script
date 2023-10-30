@@ -4,6 +4,9 @@
 
 (It is a one piece ref)
 
+Nakama Script (ns script) is a console-interpreted language made with the help of Python. Nakama Script is a lightweight and versatile programming language designed to simplify the process of expressing computational tasks. Inspired by other programming languages, Nakama Script includes features such as the variable declaration, function definitions, conditional statements, and loops, making it an ideal choice for a wide range of applications, it's your tool for streamlined computational tasks.
+
+
 ## Installation
 
 To use Nakama Script, you need to set up the interpreter or environment on your system. Here are the installation instructions:
@@ -14,6 +17,7 @@ Nakama Script is designed to be lightweight and should work on most systems. How
 
 - Operating System: Any modern OS (Windows, macOS, Linux)
 - Nakama Script Interpreter (Download from [GitHub](https://github.com/ben-blance/nakama-script))
+- All you need is Python installed
 
 ## Installation
 
