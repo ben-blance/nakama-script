@@ -208,3 +208,5 @@ If you have any questions or need assistance, feel free to contact us at [sahila
 Happy coding with Nakama Script! 
 
 it's only my first interpreted language so ya it probably sucks since I am dumb :D
+![d2zp8ga-fa37a9cf-06a0-4106-9099-8a72e08b4bc7](https://github.com/ben-blance/nakama-script/assets/147723363/4c98eb4f-ef84-4f1c-a216-2050f0de79de)
+
