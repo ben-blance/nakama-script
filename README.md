@@ -42,7 +42,7 @@ Now you have Nakama Script installed and can create and run your own scripts. Ha
 
 Once Nakama Script is installed, you can start writing and running Nakama Script programs. Here's a quick overview:
 
-- **Running Nakama Script Programs:** Use the `run` command to run Nakama Script programs. For example, `my_program.ns`.
+- **Running Nakama Script Programs:** Use the `run` command to run Nakama Script programs. For example, `run("my_program.ns")`.
 
 ### Hello, World
 
@@ -138,7 +138,7 @@ Nakama Script provides a set of built-in functions that you can use to perform v
 ### `exit()`
 
 - **Description:** Exits the Nakama Script interpreter.
-- **Usage:** `exit()`
+- **Usage:** `exit()` //Best Function
 
 ### `len(list)`
 
