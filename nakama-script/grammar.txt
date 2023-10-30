@@ -1,0 +1,130 @@
+statements  : NEWLINE* statement (NEWLINE+ statement)* NEWLINE*
+
+statement		: KEYWORD:RETURN expr?
+						: KEYWORD:CONTINUE
+						: KEYWORD:BREAK
+						: expr
+
+expression     : KEYWORD: nakama identifier eq expression
+               : comp-exp (KEYWORD = && (and) | KEYWORD = || (or)) comp-exp*
+               
+comp-exp       : KEYWORD ~(not) comp-exp
+               : arith-exp (ee, lt, gt, lte, gte) arith-exp*
+               
+arith-exp : term ((PLUS | Minus) term )*
+
+term          : factor ((MUL|DIV)factor)*
+
+factor        : (PLUS|Minus)factor
+              : power  
+
+power         : call (power float)*      
+
+call:         : atom (LPAREN (expr (COMMA expr)*)? RPAREN)?
+
+atom          : int|float|string|identifier
+              : lparan expression rparan
+              : list-expr
+              : if_exprna
+              : for-expr
+			        : while-expr
+              : func-def
+
+list-expr		: LSQUARE (expr (COMMA expr)*)? RSQUARE
+
+if-expr     : KEYWORD:IF expr KEYWORD:THEN
+              (statement if-expr-b|if-expr-c?)
+            | (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+
+if-expr-b   : KEYWORD:ELIF expr KEYWORD:THEN
+              (statement if-expr-b|if-expr-c?)
+            | (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+
+if-expr-c   : KEYWORD:ELSE
+              statement
+            | (NEWLINE statements KEYWORD:END)
+
+for-expr    : KEYWORD:FOR IDENTIFIER EQ expr KEYWORD:TO expr 
+              (KEYWORD:STEP expr)? KEYWORD:THEN
+              statement
+            | (NEWLINE statements KEYWORD:END)
+
+while-expr  : KEYWORD:WHILE expr KEYWORD:THEN
+              statements
+            | (NEWLINE statements KEYWORD:END)
+
+func-def    : KEYWORD:FUN IDENTIFIER?
+              LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN
+              (ARROW expr)
+            | (NEWLINE statements KEYWORD:END)
+
+(1 +2 ) == (1 + 2) correct way
+1 + (2 == 1) + 1   incorrect way
+
+
+nakama   ships          =   10
+variable variable_name  =  <expression>
+^           ^           ^
+keyword  identifier     equal
+
+
+leftNode
+RightNode
+SymbolTable
+
+
+
+
+#if statement syntax:
+    
+    if <condition*> then <expression*> elseif <condition*> then <expression*> else <expression*>
+    
+    example: 
+
+    nakama ships_age = 10
+    nakama ships_price = if ships_age >= 10 then 200mb else 100mb                  //mb = million_berries
+    
+#for statement syntax:
+
+    for <namaka_name*> = <start_value> to <end_value> then <expression>
+    
+    example:
+
+    nakama luffys_hunger_for_meat = 26
+    for  = meat_cooking_time = 1 to 50 then luffys_hunger_for_meat = result * i
+
+    Keyword: raise(increment/step) to update or modify the increment in for
+    eg: for i = 0 to 10 raise 2 then ...
+
+# joke 
+# Ron Swanson's Meat Cooker
+//parks_and_recreation! Son
+def cook_meat(meat_type, cooking_time):
+    print(f"Cooking {meat_type} for {cooking_time} minutes.")
+    for minute in range(1, cooking_time + 1):
+        print(f"{minute} minute(s) passed...")
+    print(f"{meat_type} is ready! Time to enjoy it, son.")
+
+# Let's cook a steak!
+cook_meat("Steak", 10)
+#joke ended
+
+#functions 
+
+gears()   syntax KEYWORD = gears
+
+strings:
+
+        "text"
+        "text with \"quotes""
+        "text with \\backslashes \\"
+        "text for \nnew line"
+
+#list
+
+[]
+
+[1, 2, 3, 4, 5] + [6] == [1,2, 3,4,5,6]
+
+#multi line
+
