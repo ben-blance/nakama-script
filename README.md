@@ -1,7 +1,7 @@
-# nakama-script 
+![Nakama-script-removebg-preview](https://github.com/ben-blance/nakama-script/assets/147723363/80b1c261-88a7-435e-b7cb-b4b9f58e4d0c)
 
 
-![Nakama Script Logo](nakama-logo.png)
+
 (It is a one piece ref)
 
 ## Installation
